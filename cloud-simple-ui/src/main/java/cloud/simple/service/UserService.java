@@ -7,6 +7,7 @@
 package cloud.simple.service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,16 +31,15 @@ public class UserService {
 
 	@HystrixCommand(fallbackMethod = "fallbackSearchAll")
 	public List<User> readUserInfo() {
-		// try {
-		// return restTemplate.getForObject(
-		// "http://" + SERVICE_NAME + "/user", List.class);
-		//
-		// } catch (Exception e) {
-		// e.printStackTrace();
-		// return null;
-		// }
+		try {
+			User[] result = restTemplate.getForObject("http://" + SERVICE_NAME
+					+ "/user", User[].class);
+			return Arrays.asList(result);
 
-		return feignUserService.readUserInfo();
+		} catch (Error e) {
+			return null;
+		}
+		// return feignUserService.readUserInfo();
 	}
 
 	@SuppressWarnings("unused")
