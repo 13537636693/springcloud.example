@@ -18,8 +18,21 @@ public class ZuulServerApplicationA {
 @RestController
 class HiController {
 
-	@RequestMapping("/A/*")
-	public String hi() throws Exception {
-		return "serviceA";
+	@RequestMapping("/*")
+	public String hi1() throws Exception {
+
+		return "/*";
+	}
+
+	@RequestMapping("/a")
+	public String hi2() throws Exception {
+
+		return "/a";
+	}
+
+	@RequestMapping("/a/*")
+	public String hi3() throws Exception {
+
+		return "/a/*";
 	}
 }

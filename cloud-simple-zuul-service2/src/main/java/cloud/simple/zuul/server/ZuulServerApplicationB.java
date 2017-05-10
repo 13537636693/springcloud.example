@@ -18,7 +18,7 @@ public class ZuulServerApplicationB {
 @RestController
 class HiController {
 
-	@RequestMapping("/B")
+	@RequestMapping("/*")
 	public String hi() throws Exception {
 		return "serviceB";
 	}
