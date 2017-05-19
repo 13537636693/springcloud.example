@@ -24,7 +24,7 @@ public class ConfigServerApplication {
 	@ResponseBody
 	@RequestMapping(value = "/")
 	String home() {
-		return "config server ,http://localhost:8888/simple-service/dev/master";
+		return "config server ~\r\nhttp://localhost:8888/cloud-simple-service/dev/master\r\nhttp://localhost:8888/cloud-simple-bus-service1/dev/master\r\n config refresh~http://localhost:8888/bus/refresh";
 	}
 
 	public static void main(String[] args) {

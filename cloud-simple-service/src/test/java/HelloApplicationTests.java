@@ -11,11 +11,11 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import cloud.simple.service.Application;
+import cloud.simple.service.SimpleApplication;
 import cloud.simple.service.web.UserController;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
+@SpringApplicationConfiguration(classes = SimpleApplication.class)
 @WebAppConfiguration
 public class HelloApplicationTests {
 

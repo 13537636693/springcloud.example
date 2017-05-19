@@ -22,7 +22,7 @@
 	
 
 	<groupId>spring.boot</groupId>
-	<artifactId>cloud-sleuth-server1</artifactId>
+	<artifactId>cloud-simple-zuul-service1</artifactId>
 	<version>0.0.1</version>
 	<packaging>jar</packaging>
 	<name>cloud-simple-zuul-service1</name>

@@ -27,10 +27,10 @@ import feign.Request;
 @EnableCircuitBreaker
 @EnableFeignClients
 @EnableHystrixDashboard
-public class WebApplication {
+public class SimpleUIApplication {
 
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(WebApplication.class, args);
+		SpringApplication.run(SimpleUIApplication.class, args);
 	}
 
 	@LoadBalanced

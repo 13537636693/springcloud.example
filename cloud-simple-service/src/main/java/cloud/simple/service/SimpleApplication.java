@@ -8,8 +8,8 @@ import org.springframework.stereotype.Controller;
 @Controller
 @SpringBootApplication
 @EnableEurekaClient
-public class Application {
+public class SimpleApplication {
 	public static void main(String[] args) throws Exception {
-		SpringApplication.run(Application.class, args);
+		SpringApplication.run(SimpleApplication.class, args);
 	}
 }
